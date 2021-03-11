@@ -1,0 +1,7 @@
+---
+title: "EDA project"
+author: "Alec White"
+date: "2021-03-02"
+output: github_document
+---
+
