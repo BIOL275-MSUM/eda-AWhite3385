@@ -4,4 +4,48 @@ author: "Alec White"
 date: "2021-03-02"
 output: github_document
 ---
+title
+Statistical Analysis of Positive SARS-CoV-19 Patients Placed in Hospital ICUs Due to Latitudinal Difference.
 
+
+Abstract
+For the past 12 months SARS-CoV-19 has been a prominent scientific topic in both the United States and the world due to its relatively high mortality rate and ability to spread efficiently and unpredictably. The effects of this viral agent have been the cause of many hospitalizations that include the placement of some of the infected individuals in Intensive Care Units (ICUs). The question being asked in this statistical analysis is does the percentage of infected individuals placed in statewide hospital’s ICUs differ due to state’s latitudinal location over a 12-month period? The data being analyzed in this experiment will come from the Minnesota and Alabama Covid-19 datasets at The COVID Tracking Project. During this exploratory data analysis, I will be comparing the percentage of infected individuals placed in an ICU due to SARS-CoV-19 in the States of Minnesota & Alabama due to their different latitudinal location within the United States and similar population size. During this analysis, recorded data over the course of a roughly 12-month period from 2/2020 to 2/2021 in quartered increments of 3 months will be used. A possible result that may be concluded from this statistical analysis is that there will be a difference in the percentage of SARS-Cov-19 infected individuals sent to ICUs between Minnesota and Alabama.
+
+Methods
+  
+  Data acquisition
+  The data for this exploratory analysis was found on covidtracking.com. The datasets used were obtained by selecting the statewide data and required no request or special permissions.
+  
+  Data preparation
+  For cleaning up this data I used a number of functions that grouped the daily total ICU admissions and current ICU admissions data between Alabama and Minnesota into weekly increments.
+Results
+
+Discussion
+
+Literature
+
+ R Core Team (2020). R: A language and environment
+  for statistical computing. R Foundation for
+  Statistical Computing, Vienna, Austria. URL
+  https://www.R-project.org/.
+  
+    Hadley Wickham, Romain François, Lionel Henry and
+  Kirill Müller (2020). dplyr: A Grammar of Data
+  Manipulation. R package version 1.0.2.
+  https://CRAN.R-project.org/package=dplyr
+  
+  Garrett Grolemund, Hadley Wickham (2011). Dates and
+  Times Made Easy with lubridate. Journal of
+  Statistical Software, 40(3), 1-25. URL
+  https://www.jstatsoft.org/v40/i03/.
+  
+   Kirill Müller and Hadley Wickham (2020). tibble:
+  Simple Data Frames. R package version 3.0.4.
+  https://CRAN.R-project.org/package=tibble
+  
+    Hadley Wickham and Jim Hester (2020). readr: Read
+  Rectangular Text Data. R package version 1.4.0.
+  https://CRAN.R-project.org/package=readr
+
+  
+  

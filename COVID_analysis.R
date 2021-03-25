@@ -4,6 +4,7 @@ library(tidyverse)
 
 library(lubridate)
 
+
 #read in covid data for both Minnesota & Alabama
 
 covidmn <-read_csv("https://covidtracking.com/data/download/minnesota-history.csv")
@@ -22,8 +23,13 @@ data1 <- bind_rows(
 
 #isolate wanted data
 
+
+
 data2 <-select(data1, date, inIcuCumulative, inIcuCurrently)
 
+data2
+
+aggregate(value~week(Interval), data = dat, mean)
 
 data3 <- data1 %>% 
   select(date, state, inIcuCumulative, inIcuCurrently) %>% 
@@ -38,5 +44,5 @@ ggplot(data = data3, aes(x = month_year, y = inIcucumulative)) +
   geom_bar(stat - "identity", fill - "green") +
   labs(title = "Total ICU admissions")
        
-
+citation
 
