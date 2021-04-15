@@ -21,28 +21,15 @@ data1 <- bind_rows(
 ) %>% 
   print()
 
-#isolate wanted data
-
-
-
-data2 <-select(data1, date, inIcuCumulative, inIcuCurrently)
-
-data2
-
-aggregate(value~week(Interval), data = dat, mean)
-
-data3 <- data1 %>% 
-  select(date, state, inIcuCumulative, inIcuCurrently) %>% 
-  mutate(month - month(date)) %>% mutate(year - year(date)) %>%
-  unite("month_year", year, month, remove = FALSE) %>% 
-  select(state, month_year, inIcuCumulative, inIcuCurrently) %>%
-  print()
-
 #graphing
 
-ggplot(data = data3, aes(x = month_year, y = inIcucumulative)) +
-  geom_bar(stat - "identity", fill - "green") +
-  labs(title = "Total ICU admissions")
+ggplot(data = data1, aes(x = date, y = positiveIncrease)) +
+  geom_bar(stat = "identity", fill = "blue") + 
+  labs(title = "daily positive increase",
+       subtitle = " Spring 2020 to Spring 2021",
+       x = "Month", y = "Number of Patients Recorded") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  facet_wrap(~ state)
        
 citation
 
