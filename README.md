@@ -1,7 +1,7 @@
 
 <img src="https://www2.mnstate.edu/uploadedImages/Content/Marketing/logos/MSUM_Signature_Vert_Color.jpg" alt="MSUM logo" width="200" style="float:right">
 
-# Statistical Analysis of Positive Covid-19 case increase in states of varying climate hostility
+# Statistical Analysis of Positive Covid-19 case Increase in States of Varying Climate Hostility
 
 Alec White & Dr. Christopher Merkord
 
@@ -69,13 +69,17 @@ Wickham and Jim Hester 2020).
 After acquiring the data for the two states being analyzed I combined
 the data for Alabama and Minnesota into one table by using the function
 bind\_rows() (Hadley Wickham et al. 2020). following this I isolated the
-target data variables by using the \#\# Results
+target data variables by using the
+
+## Results
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 ## Discussion
 
-DISCUSSION
+The initial analysis of the daily positive increase between the states
+of Minnesota and Alabama shows Alabama having a steady increase in
+positive
 
 ## References
 
