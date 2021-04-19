@@ -4,7 +4,7 @@ output: github_document
 
 <img src="https://www2.mnstate.edu/uploadedImages/Content/Marketing/logos/MSUM_Signature_Vert_Color.jpg" alt="MSUM logo" width="200" style="float:right">
 
-# Statistical Analysis of Positive Covid-19 case increase in states of varying climate hostility
+# Statistical Analysis of Positive Covid-19 case Increase in States of Varying Climate Hostility
 
 Alec White &
 Dr. Christopher Merkord
