@@ -40,19 +40,36 @@ hostilities associated with that climate?
 To show how a population’s response to local climate hostility may be
 affecting the Covid-19 positive case increase I will be taking daily
 data from two populations with different climates over the course of one
-year of data. \#\# Methods
+year.
+
+## Methods
+
+We are displaying our data and our presentation by using R studio and R,
+the current versions that we are using is R version 4.0.3 (R Core Team
+2020), and for R studio we are using R.Studio 1.4.1103 (RStudio Team
+2021)
 
 ### Data Acquisition
 
-For this project, all the data was analyzed and manipulated using
-RStudio (RStudio Team 2020). The Covid-19 data acquired between the
-states of Alabama and Minnesota was gathered from The COVID Tracking
-Project (The Atlantic Monthly Group, 2021). To acquire this data I first
-loaded an R script
+For this project, all data was analyzed and manipulated using RStudio
+(RStudio Team 2020). The Covid-19 data acquired between the states of
+Alabama and Minnesota was gathered from The COVID Tracking Project (The
+Atlantic Monthly Group, 2021). On their website, there is data daily
+data pertaining to the Covid-19 pandemic for each state within the
+United States. To acquire the data, first I opened a new R script in R
+studio. I used R version 4.0.3 (R Core Team, 2020) and RStudio version
+1.3.1093 (RStudio Team 2020).Then I loaded the tidyverse package
+(Wickham et al. 2019) and the lubridate package (Garrett Grolemund and
+Hadley Wickham 2011). After doing so I then read in the data for Alabama
+and Minnesota using the read\_csv() function, as shown below (Hadley
+Wickham and Jim Hester 2020).
 
 ### Data Preparation
 
-## Results
+After acquiring the data for the two states being analyzed I combined
+the data for Alabama and Minnesota into one table by using the function
+bind\_rows() (Hadley Wickham et al. 2020). following this I isolated the
+target data variables by using the \#\# Results
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
