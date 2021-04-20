@@ -19,31 +19,28 @@ data1 <- bind_rows(
   covidmn,
   covidal
 ) %>% 
-  inner_join(pip)
+  print()
 
-data2 <- select(data1, positiveIncrease, totalTestResultsIncrease, state, date )
+pd <- tribble(
+  ~state, ~population,
+  "MN" , 5657342, 
+  "AL" , 4921532)
+
+data2 <- select(data1, positive, , state, date )
 
 pip1 <- mutate(data2, pip = (positiveIncrease / totalTestResultsIncrease) * 100)
  
 pip1
 
-filter(pip1, MN)
-
 summarize(
   pip1, 
   mean_pip = mean(pip))
 
-pip2 <- pip1 %>% 
-  filter(!is.na(pip))%>%
-  group_by(date, state)%>%
-  summarise(
-    mean = mean(pip),
-    sd = sd(pip, na.rm = TRUE),
-    upper = mean(pip) + 1.96 * sd(pip)/sqrt(n()),
-    lower = mean(pip) - 1.96 * sd(pip)/sqrt(n())
-  )%>%
-  print()
-
+data3 <- bind_rows(covidal, covidmn) %>% 
+  inner_join(pd) %>% 
+  mutate(positiveRate = ((positive/population)/1000)) %>%
+  select(state, date, positiveRate)
+         
 #printing data
 
 ggplot(data = data1) + 
@@ -72,8 +69,8 @@ ggplot(data = data1) +
 
 
 
-ggplot(data = data1) + 
-  geom_line(aes(x = date, y = positiveIncrease), stat = "identity", fill = "black") + 
+ggplot(data = data3) + 
+  geom_line(aes(x = date, y = positiveRate), stat = "identity", fill = "black", alpha = 2.0) + 
   labs(title = "Statewide Daily Positive COVID-19 Increase & Climate Hostility ",
        subtitle = " Spring 2020 to Spring 2021",
        x = "Month", y = "Number of positive Covid-19 Cases Recorded") +

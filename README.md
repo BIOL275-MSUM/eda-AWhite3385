@@ -90,14 +90,25 @@ The results are based off of daily Covid-19 positive case increase
 between the states of Alabama and Minnesota with respect to
 seasons(Summer, Winter, ect.) and the climates associated with them
 
-There is a steady increase in the number positive cases recorded during
-seasons of extreme temperatures in both Minnesota and Alabama. (Figure
-1.)
+There is a steady increase in the number positive case increase recorded
+during seasons of extreme temperatures in both Minnesota and Alabama.
+(Figure 1.)
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
 Figure 1. Daily reported Covid-19 Positive increase values with Weather
-hostility patterns in regards to state climate.
+hostility patterns in regards to official season start dates in
+Minnesota and Alabama.
+
+There is a slower rate at which Minnesota COVID-19 cases during extreme
+heat seasons, Alabama also appears to have a larger amount of
+individuals with positive confirmed cases during the extreme cold
+seasons.
+
+![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+Figure 2. Line graphs showing the Positivity rate per 1,000 of each
+states population during official seasons.
 
 ## Discussion
 

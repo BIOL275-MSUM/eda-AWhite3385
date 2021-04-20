@@ -41,7 +41,7 @@ For this project, all data was analyzed and manipulated using RStudio (RStudio T
 ## Results
 The results are based off of daily Covid-19 positive case increase between the states of Alabama and Minnesota with respect to seasons(Summer, Winter, ect.) and the climates associated with them 
 
-There is a steady increase in the number positive cases recorded during seasons of extreme temperatures in both Minnesota and Alabama. (Figure 1.)
+There is a steady increase in the number positive case increase recorded during seasons of extreme temperatures in both Minnesota and Alabama. (Figure 1.)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, results = FALSE, message=FALSE, warning=FALSE)
@@ -71,9 +71,19 @@ data1 <- bind_rows(
 ) %>% 
   print()
 
+pd <- tribble(
+  ~state, ~population,
+  "MN" , 5657342, 
+  "AL" , 4921532)
+
+data3 <- bind_rows(covidal, covidmn) %>% 
+  inner_join(pd) %>% 
+  mutate(positiveRate = ((positive/population)/1000)) %>%
+  select(state, date, positiveRate)
+
 #printing data
 ggplot(data = data1) + 
-  geom_line(aes(x = date, y = positiveIncrease), stat = "identity", fill = "black") + 
+  geom_bar(aes(x = date, y = positiveIncrease), stat = "identity", fill = "black") + 
   labs(title = "Statewide Daily Positive COVID-19 Increase & Climate Hostility ",
        subtitle = " Spring 2020 to Spring 2021",
        x = "Month", y = "Number of positive Covid-19 Cases Recorded") +
@@ -98,6 +108,37 @@ ggplot(data = data1) +
 ```
 
 Figure 1. Daily reported Covid-19 Positive increase values with Weather hostility patterns in regards to official season start dates in Minnesota and Alabama.
+
+There is a slower rate at which Minnesota COVID-19 cases during extreme heat seasons, Alabama also appears to have a larger amount of individuals with positive confirmed cases during the extreme cold seasons.
+
+```{r}
+ggplot(data = data3) + 
+  geom_line(aes(x = date, y = positiveRate), stat = "identity", fill = "black", alpha = 2.0) + 
+  labs(title = "Positivity Rate",
+       subtitle = " Spring 2020 to Spring 2021",
+       x = "Month", y = "Number of positive Covid-19 Cases Recorded") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  facet_wrap(~ state, ncol = 1) +
+  geom_rect(
+    data = tribble(
+      ~state, ~start_date, ~end_date, ~description,
+      "AL", ymd(20200601), ymd(20200901), "Extreme Heat (Summer)" ,
+      "MN", ymd(20200601), ymd(20200901), "Extreme Heat (Summer)" ,
+      "MN", ymd(20201201), ymd(20210301), "Extreme cold (Winter)" ,
+      "AL", ymd(20201201), ymd(20210301), "Extreme cold (Winter)" ,
+      "AL", ymd(20200901), ymd(20201201), "Nice weather (Spring or Autumn)" ,
+      "MN", ymd(20200901), ymd(20201201), "Nice weather (Spring or Autumn)" ,
+      "AL", ymd(20200311), ymd(20200601), "Nice weather (Spring or Autumn)" ,
+      "MN", ymd(20200311), ymd(20200601), "Nice weather (Spring or Autumn)",
+    ),
+    mapping = aes(xmin = start_date, xmax = end_date,  ymin = -Inf, ymax = Inf, fill = description),
+    alpha = .2
+  ) +
+  scale_fill_manual(values = c("blue", "red", "green"))
+```
+
+Figure 2. Line graphs showing the Positivity rate per 1,000 of each states population during official seasons.
+
 ## Discussion
 
 The initial analysis of the daily positive increase between the states of Minnesota and Alabama shows Alabama having a steady increase in positive 
