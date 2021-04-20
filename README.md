@@ -20,15 +20,16 @@ Submit a survey for this presentation:
 The data being analyzed in this experiment will come from the Minnesota
 and Alabama COVID-19 (SARS-CoV-2) datasets at The COVID Tracking
 Project. During this exploratory data analysis, I will be comparing the
-daily positive case increase in the States of Minnesota & Alabama due to
-their differences in climate hostility throughout the seasons of the
-year and similar population size. During this analysis, recorded data
-over the course of a roughly 13-month period from 2/2020 to 3/2021 will
-be analyzed in respect to the local seasonal climate since data on
-COVID-19 began getting recorded daily. A possible result that may be
-concluded from this statistical analysis is that there will be a
-difference in the percentage of positive case increases during times of
-the year where the climate in these states is considered hostile.
+daily positive case increase and population rate of positive cases in
+the States of Minnesota & Alabama due to their differences in climate
+hostility throughout the seasons of the year and similar population
+size. During this analysis, recorded data over the course of a roughly
+13-month period from 2/2020 to 3/2021 will be analyzed in respect to the
+local seasonal climate since data on COVID-19 began getting recorded
+daily. A possible result that may be concluded from this statistical
+analysis is that there will be a difference in the percentage of
+positive case increases during times of the year where the climate in
+these states is considered hostile.
 
 ## Introduction
 
@@ -81,8 +82,16 @@ Wickham and Jim Hester 2020).
 
 After acquiring the data for the two states being analyzed I combined
 the data for Alabama and Minnesota into one table by using the function
-bind\_rows() (Hadley Wickham et al. 2020). following this I isolated the
-target data variables within a the plot function &&&. After this I
+bind\_rows() (Hadley Wickham et al. 2020). Following this I isolated the
+target data of total positive cases while adding state population size
+data (Macrotrends, 2020) by using the tribble function. Then I then
+bound the Minnesota & Alabama data into another row, followed by using
+inner\_join() to add the population data to the datasets. I then added
+the COVID-19 positivity rate calculation by using the mutate(Hadley
+Wickham et al. 2020) command to divide the positive cases by the total
+population of the respective state. I then divided this by 1000. Finally
+I selected my target variables to be used for figure building and data
+analysis.
 
 ## Results
 
@@ -108,7 +117,7 @@ seasons.
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 Figure 2. Line graphs showing the Positivity rate per 1,000 of each
-states population during official seasons.
+states population during official climate seasons.
 
 ## Discussion
 
@@ -131,6 +140,10 @@ positive
 
   - Wickham et al., (2019). Welcome to the tidyverse. Journal of Open
     Source Software, 4(43), 1686, <https://doi.org/10.21105/joss.01686>
+
+  - Macrotrends.net. 2021. MacroTrends | Charting Global Markets and
+    Economies. \[online\] Available at: <http://www.macrotrends.net>
+    \[Accessed 19 April 2021\].
 
   - R Core Team (2020). R: A language and environment for statistical
     computing. R Foundation for Statistical Computing, Vienna, Austria.
