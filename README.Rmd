@@ -17,13 +17,13 @@ Submit a survey for this presentation: https://mnstate.co1.qualtrics.com/jfe/for
 
 ## Abstract
 
- The data being analyzed in this experiment will come from the Minnesota and Alabama Covid-19 datasets at The COVID Tracking Project. During this exploratory data analysis, I will be comparing the daily positive case increase in the States of Minnesota & Alabama due to their differences in climate hostility and similar population size. During this analysis, recorded data over the course of a roughly 12-month period from 2/2020 to 3/2021. A possible result that may be concluded from this statistical analysis is that there will be a difference in the percentage of positive case increases during times of the year where the climate in these states is considered hostile.
+ The data being analyzed in this experiment will come from the Minnesota and Alabama Covid-19 (SARS-CoV-2) datasets at The COVID Tracking Project. During this exploratory data analysis, I will be comparing the daily positive case increase in the States of Minnesota & Alabama due to their differences in climate hostility throughout the seasons of the year and similar population size. During this analysis, recorded data over the course of a roughly 12-month period from 2/2020 to 3/2021 will be analyzed in respect to the local climate Since data on Covid-19 began began getting a recorded daily. A possible result that may be concluded from this statistical analysis is that there will be a difference in the percentage of positive case increases during times of the year where the climate in these states is considered hostile.
 
 ## Introduction
 
 For the past 12 months Covid-19 has been a prominent scientific topic in both the United States and the world due to its relatively high mortality rate and ability to spread efficiently and unpredictably. The effects of this viral agent have been the cause of many hospitalizations and deaths in a wide range of age groups and heath statuses. 
 
-There has been a large number of studies related to Covid-19 have since been released due to the large effect it has had on the world population's daily lives. With how widespread Covid-19 has become I many location related questions can be asked, such as does the percentage of positive case increases have a correlation with a location's climate and the local population's response to the hostilities associated with that climate?
+There has been a large number of studies related to Covid-19 have since been released due to the large effect it has had on the world population's daily lives. With how widespread Covid-19 has become, many location related questions can be asked, such as does the percentage of positive case increases have a correlation with a location's climate and the local population's response to the hostilities associated with that climate during different portions of the year?
 
 To show how a population's response to local climate hostility may be affecting the Covid-19 positive case increase I will be taking daily data from two populations with different climates over the course of one year.
 
@@ -34,7 +34,7 @@ We are displaying our data and our presentation by using R studio and R, the cur
 For this project, all data was analyzed and manipulated using RStudio (RStudio Team 2020). The Covid-19 data acquired between the states of Alabama and Minnesota was gathered from The COVID Tracking Project (The Atlantic Monthly Group, 2021).  On their website, there is data daily data pertaining to the Covid-19 pandemic for each state within the United States. To acquire the data, first I opened a new R script in R studio. I used R version 4.0.3 (R Core Team, 2020) and RStudio version 1.3.1093 (RStudio Team 2020).Then I loaded the tidyverse package (Wickham et al. 2019) and the lubridate package (Garrett Grolemund and Hadley Wickham 2011). After doing so I then read in the data for Alabama and Minnesota using the read_csv() function, as shown below (Hadley Wickham and Jim Hester 2020).
 
 ### Data Preparation
- After acquiring the data for the two states being analyzed I combined the data for Alabama and Minnesota into one table by using the function bind_rows() (Hadley Wickham et al. 2020). following this I isolated the target data variables by using the 
+ After acquiring the data for the two states being analyzed I combined the data for Alabama and Minnesota into one table by using the function bind_rows() (Hadley Wickham et al. 2020). following this I isolated the target data variables within a the plot function &&&. After this I 
 
 ## Results
 

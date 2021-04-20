@@ -8,18 +8,25 @@ Alec White & Dr. Christopher Merkord
 Biosciences Department, Minnesota State University Moorhead, 1104 7th
 Avenue South, Moorhead, MN 56563 USA
 
+Presented at the MSUM 23rd Online Student Academic Conference
+
+Submit a survey for this presentation:
+<https://mnstate.co1.qualtrics.com/jfe/form/SV_eFMAwF72JZIoeSq>
+
 ## Abstract
 
 The data being analyzed in this experiment will come from the Minnesota
-and Alabama Covid-19 datasets at The COVID Tracking Project. During this
-exploratory data analysis, I will be comparing the daily positive case
-increase in the States of Minnesota & Alabama due to their differences
-in climate hostility and similar population size. During this analysis,
-recorded data over the course of a roughly 12-month period from 2/2020
-to 3/2021. A possible result that may be concluded from this statistical
-analysis is that there will be a difference in the percentage of
-positive case increases during times of the year where the climate in
-these states is considered hostile.
+and Alabama Covid-19 (SARS-CoV-2) datasets at The COVID Tracking
+Project. During this exploratory data analysis, I will be comparing the
+daily positive case increase in the States of Minnesota & Alabama due to
+their differences in climate hostility throughout the seasons of the
+year and similar population size. During this analysis, recorded data
+over the course of a roughly 12-month period from 2/2020 to 3/2021 will
+be analyzed in respect to the local climate Since data on Covid-19 began
+began getting a recorded daily. A possible result that may be concluded
+from this statistical analysis is that there will be a difference in the
+percentage of positive case increases during times of the year where the
+climate in these states is considered hostile.
 
 ## Introduction
 
@@ -31,11 +38,12 @@ and deaths in a wide range of age groups and heath statuses.
 
 There has been a large number of studies related to Covid-19 have since
 been released due to the large effect it has had on the world
-population’s daily lives. With how widespread Covid-19 has become I
+population’s daily lives. With how widespread Covid-19 has become,
 many location related questions can be asked, such as does the
 percentage of positive case increases have a correlation with a
 location’s climate and the local population’s response to the
-hostilities associated with that climate?
+hostilities associated with that climate during different portions of
+the year?
 
 To show how a population’s response to local climate hostility may be
 affecting the Covid-19 positive case increase I will be taking daily
@@ -69,7 +77,7 @@ Wickham and Jim Hester 2020).
 After acquiring the data for the two states being analyzed I combined
 the data for Alabama and Minnesota into one table by using the function
 bind\_rows() (Hadley Wickham et al. 2020). following this I isolated the
-target data variables by using the
+target data variables within a the plot function &&&. After this I
 
 ## Results
 
