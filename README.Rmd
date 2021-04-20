@@ -97,7 +97,7 @@ ggplot(data = data1) +
   scale_fill_manual(values = c("blue", "red", "green"))
 ```
 
-Figure 1. Daily reported Covid-19 Positive increase values with Weather hostility patterns in regards to official season start dates.
+Figure 1. Daily reported Covid-19 Positive increase values with Weather hostility patterns in regards to official season start dates in Minnesota and Alabama.
 ## Discussion
 
 The initial analysis of the daily positive increase between the states of Minnesota and Alabama shows Alabama having a steady increase in positive 
