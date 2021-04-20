@@ -4,7 +4,9 @@ output: github_document
 
 <img src="https://www2.mnstate.edu/uploadedImages/Content/Marketing/logos/MSUM_Signature_Vert_Color.jpg" alt="MSUM logo" width="200" style="float:right">
 
-# Statistical Analysis of Positive Covid-19 case Increase in States of Varying Climate Hostility
+# Statistical Analysis of Positive COVID-19 case Increase in States of Varying Climate Hostility
+
+Presentation ID: 4974
 
 Alec White &
 Dr. Christopher Merkord
@@ -17,15 +19,15 @@ Submit a survey for this presentation: https://mnstate.co1.qualtrics.com/jfe/for
 
 ## Abstract
 
- The data being analyzed in this experiment will come from the Minnesota and Alabama Covid-19 (SARS-CoV-2) datasets at The COVID Tracking Project. During this exploratory data analysis, I will be comparing the daily positive case increase in the States of Minnesota & Alabama due to their differences in climate hostility throughout the seasons of the year and similar population size. During this analysis, recorded data over the course of a roughly 12-month period from 2/2020 to 3/2021 will be analyzed in respect to the local climate Since data on Covid-19 began began getting a recorded daily. A possible result that may be concluded from this statistical analysis is that there will be a difference in the percentage of positive case increases during times of the year where the climate in these states is considered hostile.
+ The data being analyzed in this experiment will come from the Minnesota and Alabama COVID-19 (SARS-CoV-2) datasets at The COVID Tracking Project. During this exploratory data analysis, I will be comparing the daily positive case increase in the States of Minnesota & Alabama due to their differences in climate hostility throughout the seasons of the year and similar population size. During this analysis, recorded data over the course of a roughly 13-month period from 2/2020 to 3/2021 will be analyzed in respect to the local seasonal climate since data on COVID-19 began getting recorded daily. A possible result that may be concluded from this statistical analysis is that there will be a difference in the percentage of positive case increases during times of the year where the climate in these states is considered hostile.
 
 ## Introduction
 
-For the past 12 months Covid-19 has been a prominent scientific topic in both the United States and the world due to its relatively high mortality rate and ability to spread efficiently and unpredictably. The effects of this viral agent have been the cause of many hospitalizations and deaths in a wide range of age groups and heath statuses. 
+For the past 12 months COVID-19 has been a prominent scientific topic in both the United States and the world due to its relatively high mortality rate and ability to spread efficiently and unpredictably. The effects of this viral agent have been the cause of many hospitalizations and deaths in a wide range of age groups and heath statuses. 
 
-There has been a large number of studies related to Covid-19 have since been released due to the large effect it has had on the world population's daily lives. With how widespread Covid-19 has become, many location related questions can be asked, such as does the percentage of positive case increases have a correlation with a location's climate and the local population's response to the hostilities associated with that climate during different portions of the year?
+There has been a large number of studies related to COVID-19 have since been released due to the large effect it has had on the world population's daily lives. With how widespread COVID-19 has become, many location related questions can be asked, such as does the percentage of positive case increases have a correlation with a location's climate and the local population's response to the hostilities associated with that climate during different portions of the year? This data may be used to help predict increases in positive case rates while certain climate changes are approaching within the different states and to allow medical services to be more adequately prepared for a heavier flow of positive COVID-19 cases.
 
-To show how a population's response to local climate hostility may be affecting the Covid-19 positive case increase I will be taking daily data from two populations with different climates over the course of one year.
+To show how a population's response to local climate hostility may be affecting the COVID-19 positive case increase I will be taking daily data from two populations with different climates over the course of one year.
 
 ## Methods
 We are displaying our data and our presentation by using R studio and R, the current versions that we are using is R version 4.0.3 (R Core Team 2020), and for R studio we are using R.Studio 1.4.1103 (RStudio Team 2021)
@@ -37,6 +39,9 @@ For this project, all data was analyzed and manipulated using RStudio (RStudio T
  After acquiring the data for the two states being analyzed I combined the data for Alabama and Minnesota into one table by using the function bind_rows() (Hadley Wickham et al. 2020). following this I isolated the target data variables within a the plot function &&&. After this I 
 
 ## Results
+The results are based off of daily Covid-19 positive case increase between the states of Alabama and Minnesota with respect to seasons(Summer, Winter, ect.) and the climates associated with them 
+
+There is a steady increase in the number positive cases recorded during seasons of extreme temperatures in both Minnesota and Alabama. (Figure 1.)
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, results = FALSE, message=FALSE, warning=FALSE)
@@ -68,8 +73,8 @@ data1 <- bind_rows(
 
 #printing data
 ggplot(data = data1) + 
-  geom_bar(aes(x = date, y = positiveIncrease), stat = "identity", fill = "blue") + 
-  labs(title = "Daily Positive Increase",
+  geom_line(aes(x = date, y = positiveIncrease), stat = "identity", fill = "black") + 
+  labs(title = "Statewide Daily Positive COVID-19 Increase & Climate Hostility ",
        subtitle = " Spring 2020 to Spring 2021",
        x = "Month", y = "Number of positive Covid-19 Cases Recorded") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
@@ -77,20 +82,22 @@ ggplot(data = data1) +
   geom_rect(
     data = tribble(
       ~state, ~start_date, ~end_date, ~description,
-      "AL", ymd(20200605), ymd(20200905), "Extreme Heat",
-      "MN", ymd(20200320), ymd(20201005), "Nice weather",
-      "MN", ymd(20201005), ymd(20210305), "Extreme cold" ,
-      "AL", ymd(20200905), ymd(20201105), "Nice weather",
-      "AL", ymd(20201105), ymd(20210205), "Extreme cold" ,
-      "AL", ymd(20210205), ymd(20210305), "Nice weather" ,
-      "AL", ymd(20200320), ymd(20200605), "Nice weather"
+      "AL", ymd(20200601), ymd(20200901), "Extreme Heat (Summer)" ,
+      "MN", ymd(20200601), ymd(20200901), "Extreme Heat (Summer)" ,
+      "MN", ymd(20201201), ymd(20210301), "Extreme cold (Winter)" ,
+      "AL", ymd(20201201), ymd(20210301), "Extreme cold (Winter)" ,
+      "AL", ymd(20200901), ymd(20201201), "Nice weather (Spring or Autumn)" ,
+      "MN", ymd(20200901), ymd(20201201), "Nice weather (Spring or Autumn)" ,
+      "AL", ymd(20200311), ymd(20200601), "Nice weather (Spring or Autumn)" ,
+      "MN", ymd(20200311), ymd(20200601), "Nice weather (Spring or Autumn)",
     ),
     mapping = aes(xmin = start_date, xmax = end_date,  ymin = -Inf, ymax = Inf, fill = description),
     alpha = .2
   ) +
-  scale_fill_manual(values = c("blue", "red", "green", "green"))
+  scale_fill_manual(values = c("blue", "red", "green"))
 ```
 
+Figure 1. Daily reported Covid-19 Positive increase values with Weather hostility patterns in regards to official season start dates.
 ## Discussion
 
 The initial analysis of the daily positive increase between the states of Minnesota and Alabama shows Alabama having a steady increase in positive 

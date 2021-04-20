@@ -1,7 +1,9 @@
 
 <img src="https://www2.mnstate.edu/uploadedImages/Content/Marketing/logos/MSUM_Signature_Vert_Color.jpg" alt="MSUM logo" width="200" style="float:right">
 
-# Statistical Analysis of Positive Covid-19 case Increase in States of Varying Climate Hostility
+# Statistical Analysis of Positive COVID-19 case Increase in States of Varying Climate Hostility
+
+Presentation ID: 4974
 
 Alec White & Dr. Christopher Merkord
 
@@ -16,37 +18,40 @@ Submit a survey for this presentation:
 ## Abstract
 
 The data being analyzed in this experiment will come from the Minnesota
-and Alabama Covid-19 (SARS-CoV-2) datasets at The COVID Tracking
+and Alabama COVID-19 (SARS-CoV-2) datasets at The COVID Tracking
 Project. During this exploratory data analysis, I will be comparing the
 daily positive case increase in the States of Minnesota & Alabama due to
 their differences in climate hostility throughout the seasons of the
 year and similar population size. During this analysis, recorded data
-over the course of a roughly 12-month period from 2/2020 to 3/2021 will
-be analyzed in respect to the local climate Since data on Covid-19 began
-began getting a recorded daily. A possible result that may be concluded
-from this statistical analysis is that there will be a difference in the
-percentage of positive case increases during times of the year where the
-climate in these states is considered hostile.
+over the course of a roughly 13-month period from 2/2020 to 3/2021 will
+be analyzed in respect to the local seasonal climate since data on
+COVID-19 began getting recorded daily. A possible result that may be
+concluded from this statistical analysis is that there will be a
+difference in the percentage of positive case increases during times of
+the year where the climate in these states is considered hostile.
 
 ## Introduction
 
-For the past 12 months Covid-19 has been a prominent scientific topic in
+For the past 12 months COVID-19 has been a prominent scientific topic in
 both the United States and the world due to its relatively high
 mortality rate and ability to spread efficiently and unpredictably. The
 effects of this viral agent have been the cause of many hospitalizations
 and deaths in a wide range of age groups and heath statuses.
 
-There has been a large number of studies related to Covid-19 have since
+There has been a large number of studies related to COVID-19 have since
 been released due to the large effect it has had on the world
-population’s daily lives. With how widespread Covid-19 has become,
+population’s daily lives. With how widespread COVID-19 has become,
 many location related questions can be asked, such as does the
 percentage of positive case increases have a correlation with a
 location’s climate and the local population’s response to the
 hostilities associated with that climate during different portions of
-the year?
+the year? This data may be used to help predict increases in positive
+case rates while certain climate changes are approaching within the
+different states and to allow medical services to be more adequately
+prepared for a heavier flow of positive COVID-19 cases.
 
 To show how a population’s response to local climate hostility may be
-affecting the Covid-19 positive case increase I will be taking daily
+affecting the COVID-19 positive case increase I will be taking daily
 data from two populations with different climates over the course of one
 year.
 
@@ -81,7 +86,18 @@ target data variables within a the plot function &&&. After this I
 
 ## Results
 
+The results are based off of daily Covid-19 positive case increase
+between the states of Alabama and Minnesota with respect to
+seasons(Summer, Winter, ect.) and the climates associated with them
+
+There is a steady increase in the number positive cases recorded during
+seasons of extreme temperatures in both Minnesota and Alabama. (Figure
+1.)
+
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+Figure 1. Daily reported Covid-19 Positive increase values with Weather
+hostility patterns in regards to state climate.
 
 ## Discussion
 
