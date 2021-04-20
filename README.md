@@ -20,16 +20,20 @@ Submit a survey for this presentation:
 The data being analyzed in this experiment will come from the Minnesota
 and Alabama COVID-19 (SARS-CoV-2) datasets at The COVID Tracking
 Project. During this exploratory data analysis, I will be comparing the
-daily positive case increase and population rate of positive cases in
-the States of Minnesota & Alabama due to their differences in climate
-hostility throughout the seasons of the year and similar population
-size. During this analysis, recorded data over the course of a roughly
-13-month period from 2/2020 to 3/2021 will be analyzed in respect to the
-local seasonal climate since data on COVID-19 began getting recorded
-daily. A possible result that may be concluded from this statistical
-analysis is that there will be a difference in the percentage of
-positive case increases during times of the year where the climate in
-these states is considered hostile.
+statewide daily positive case increase and population rate of positive
+cases in the States of Minnesota & Alabama due to their differences in
+climate hostility throughout the seasons of the year and similar
+population size. During this analysis, recorded data over the course of
+a roughly 13-month period from 2/2020 to 3/2021 will be analyzed in
+respect to the local seasonal climate since data on COVID-19 began
+getting recorded. How will local climate between states located in a
+Northern or Southern setting affect COVID-19 data trends? I will be
+using Rstudio to select and manipulate certain data variables between
+Minnsota and Alabama, which are respectively located in a Northern and a
+Southern climate. A possible result that may be concluded from this
+statistical analysis is that there will be a difference in the
+percentage of positive case increases during times of the year where the
+climate in these states is considered hostile.
 
 ## Introduction
 
@@ -66,7 +70,7 @@ the current versions that we are using is R version 4.0.3 (R Core Team
 ### Data Acquisition
 
 For this project, all data was analyzed and manipulated using RStudio
-(RStudio Team 2020). The Covid-19 data acquired between the states of
+(RStudio Team 2020). The COVID-19 data acquired between the states of
 Alabama and Minnesota was gathered from The COVID Tracking Project (The
 Atlantic Monthly Group, 2021). On their website, there is data daily
 data pertaining to the Covid-19 pandemic for each state within the
@@ -95,9 +99,10 @@ analysis.
 
 ## Results
 
-The results are based off of daily Covid-19 positive case increase
-between the states of Alabama and Minnesota with respect to
-seasons(Summer, Winter, ect.) and the climates associated with them
+The results are based off of daily COVID-19 positive case increase and
+state population positive COVID-19 case rates between the states of
+Alabama and Minnesota with respect to seasons(Summer, Winter, ect.) and
+the climates associated with them.
 
 There is a steady increase in the number positive case increase recorded
 during seasons of extreme temperatures in both Minnesota and Alabama.
@@ -112,18 +117,43 @@ Minnesota and Alabama.
 There is a slower rate at which Minnesota COVID-19 cases during extreme
 heat seasons, Alabama also appears to have a larger amount of
 individuals with positive confirmed cases during the extreme cold
-seasons.
+seasons.(Figure 2)
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 Figure 2. Line graphs showing the Positivity rate per 1,000 of each
-states population during official climate seasons.
+state’s population during official climate seasons.
 
 ## Discussion
 
-The initial analysis of the daily positive increase between the states
-of Minnesota and Alabama shows Alabama having a steady increase in
-positive
+After all results were found, there were some notable trends in the
+figures presented. The state of Alabama showed a much more evenly
+distributed curve of positive case increases throughout the year of data
+collection done, seemingly spiking slightly during the later months of
+Summer and the early months of Winter. Minnesota showed a lower curve up
+until the later months of fall, where there then appears to be a
+significant spike in COVID-19 case increases being recorded. The
+positivity rates between Minnesota and Alabama shows similar trends to
+the positive case increase, showing spikes of positivity rates in
+regards to the statewide population during or near seasons that present
+local climate hostility. Local responses to seasonal climate, such as
+being in closed spaces with regulated temperatures, may be the result of
+spikes in positive COVID-19 case increases and population infection
+rate. Some other factors that may affect this data potentially include
+statewide mandates and orders to help prevent the spread of COVID-19,
+along with local response to COVID-19 and certain times of the year that
+may lead to an increased exposure for individuals, such as local
+holidays.
+
+The implications of this study are limited due to the short-term data
+that was being collected on COVID-19 over the course of the past year.
+The next steps to this study would be to perform a statistical test on
+the average rates of COVID-19 infections during the separate months of
+2020-2021 while also tracking statewide changes in climate. This would
+then be used to see if there were any significant differences in the
+positivity rates during months of climate hostility. I would also expand
+the number of states being analyzed, using states of similar population
+sizes and differing climate hostilities
 
 ## References
 
